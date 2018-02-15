@@ -8,18 +8,23 @@ $usuarios = $sql->select("SELECT * FROM tb_usuarios");
 
 echo json_encode($usuarios);*/
 
+//Carrega apenas um usuario
+//$root = new Usuario();
+//$root->loadById(4);
+//echo $root;
 
-$root = new Usuario();
+//Carrega uma lista de usuarios
+//$lista = Usuario::getList();
+//echo json_encode($lista);
 
-$root->loadById(4);
+//Carrega uma lista de usuarios  em uma busca
+//$search =  Usuario::search("Fran");
+//echo json_encode($search);
 
+//Carrega usuario verificando login e senha
+$usuario = new Usuario();
+$usuario->login("Francisco","eqwasdaios");
 
-if(isset($root)){
-	echo $root;
-} else
-	echo "Não existe usario com este id";
-
-
-
+echo $usuario;
 
 ?>
