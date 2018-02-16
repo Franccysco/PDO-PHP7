@@ -34,10 +34,15 @@ $aluno = new Usuario("Aluno", "23456231");
 $aluno->insert();
 echo $aluno;*/
 
-//Update do usuario
+/*Update Atualiza o usuario
 $usuario = new Usuario();
 $usuario->loadById(14);
 $usuario->update("Professor", "54321344");
+echo $usuario;*/
 
+//Deleta um usuario
+$usuario = new Usuario();
+$usuario->loadById(11);
+$usuario->delete();
 echo $usuario;
 ?>
